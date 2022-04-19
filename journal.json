@@ -5,147 +5,147 @@
             "faiblesse": "Un esprit peut être temporairement arrêté en brûlant des bâtons d'encens près de lui.",
             "force": "Aucune",
             "preuves": ["EMF 5", "Spirit Box", "Écriture fantômatique"],
-            "Foncton unique": ["La prévention de la chasse au bâton d'encens est augmentée de 90 secondes à 180 secondes"]
+            "tips": ["La prévention de la chasse au bâton d'encens est augmentée de 90 secondes à 180 secondes"]
         },
         "spectre": {
             "description": "Le Spectre sont l'un des fantômes les plus dangereux que vous trouverez. C'est aussi le seul fantôme connu qui a la capacité de voler et qui a parfois été connu pour traverser les murs.",
             "faiblesse": "Les Spectres ont une réaction toxique au sel.",
             "force": "Les Spectres ne touchent presque jamais le sol, ce qui signifie qu'il ne peut pas être suivi par des pas.",
             "preuves": ["EMF 5", "Spirit Box", "DOTS"],
-            "Foncton unique": ["Les interactions ont augmenté lors de la marche dans le sel.", "Les empreintes de pas ne sont pas visibles avec le sel et les lampes UV lorsque vous entendez des pas", "Se téléporter vers un joueur dégagera un EMF 2 même sans objets avec lesquels interagir."]
+            "tips": ["Les interactions ont augmenté lors de la marche dans le sel.", "Les empreintes de pas ne sont pas visibles avec le sel et les lampes UV lorsque vous entendez des pas", "Se téléporter vers un joueur dégagera un EMF 2 même sans objets avec lesquels interagir."]
         },
         "fantom": {
             "description": "Un fantôme est un fantôme qui peut posséder les vivants, induisant la peur chez ceux qui l'entourent. Ils sont le plus souvent convoqués à partir de planches Ouija.",
             "faiblesse": "Prendre une photo du Fantôme le fera temporairement disparaître.",
             "force": "Regarder un fantôme fera baisser votre santé mentale beaucoup plus rapidement.",
             "preuves": ["Spirit Box", "DOTS", "Empreintes Digitales"],
-            "Foncton unique": ["Lors de la chasse, la visibilité des fantômes entre les disparitions sera augmentée de 0,1 seconde à 1 seconde ou plus", "La perte de santé mentale se produit lorsque vous regardez le fantôme pendant un événement/une chasse aux fantômes", "Les images fantômes répertoriées dans le journal ne montreront pas le fantôme dans l'image.", "Augmentation des chances d'itinérance sur de longues distances vers un joueur"]
+            "tips": ["Lors de la chasse, la visibilité des fantômes entre les disparitions sera augmentée de 0,1 seconde à 1 seconde ou plus", "La perte de santé mentale se produit lorsque vous regardez le fantôme pendant un événement/une chasse aux fantômes", "Les images fantômes répertoriées dans le journal ne montreront pas le fantôme dans l'image.", "Augmentation des chances d'itinérance sur de longues distances vers un joueur"]
         },
         "poltergeist": {
             "description": "Un des fantômes les plus célèbres, le Poltergeist. Connu pour manipuler des objets autour d'elle afin de répandre la peur dans ses victimes",
             "faiblesse": "N'ayant rien à jeter, les Poltergeists deviennent impuissants",
             "force": "Un Poltergeist peut lancer plusieurs objets à la fois",
             "preuves": ["Empreintes Digitales", "Spirit Box", "Écriture fantômatique"],
-            "Foncton unique": ["Les interactions sont deux ou plusieurs éléments à la fois si plusieurs objets sont à proximité", "Perte de santé de 2 % pour chaque objet lancé à tous les joueurs à proximité", "Le moniteur d'activité peut montrer similaire à EMF 5 spike (0 à 4/5 bar puis un drop)"]
+            "tips": ["Les interactions sont deux ou plusieurs éléments à la fois si plusieurs objets sont à proximité", "Perte de santé de 2 % pour chaque objet lancé à tous les joueurs à proximité", "Le moniteur d'activité peut montrer similaire à EMF 5 spike (0 à 4/5 bar puis un drop)"]
         },
         "banshee": {
             "description": "La sirène chantante, connue pour attirer ses victimes par le chant. Il est connu pour distinguer sa proie avant de porter un coup mortel",
             "faiblesse": "Les Banshees craignent la Croix du Crucifix et seront moins agressives lorsqu'elles en approchent une",
             "force": "Un Banshee ne ciblera qu'une seule personne à la fois",
             "preuves": ["Empreintes Digitales", "Obre fantômatique", "DOTS"],
-            "Foncton unique": ["Lors de la chasse, il ne cible qu'une seule personne. Modifications de l'attaque normale du fantôme lorsque la cible principale quitte la maison", "Lorsque la chasse et que la cible principale meurt, elle cible un autre joueur", "La chasse à la santé moyenne est à la charge de la cible et non la santé mentale moyenne", "Les événements fantômes sont susceptibles d'être ceux basés sur le chant", "Perte de santé mental a augmenté de 5% lors d'un chant", "Le microphone parabolique a une chance d'avoir une file d'attente audio unique", "L'itinérance se fera souvent vers leur cible"]
+            "tips": ["Lors de la chasse, il ne cible qu'une seule personne. Modifications de l'attaque normale du fantôme lorsque la cible principale quitte la maison", "Lorsque la chasse et que la cible principale meurt, elle cible un autre joueur", "La chasse à la santé moyenne est à la charge de la cible et non la santé mentale moyenne", "Les événements fantômes sont susceptibles d'être ceux basés sur le chant", "Perte de santé mental a augmenté de 5% lors d'un chant", "Le microphone parabolique a une chance d'avoir une file d'attente audio unique", "L'itinérance se fera souvent vers leur cible"]
         },
         "djinn": {
             "description": "Un djinn est un fantôme territorial qui attaquera lorsqu'il est menacé. Il est également connu pour être capable de voyager à grande vitesse",
             "faiblesse": "Un djinn voyagera à une vitesse plus rapide si sa victime est loin",
             "force": "La désactivation de la source d'alimentation des emplacements empêchera les djinns d'utiliser sa capacité",
             "preuves": ["Empreintes Digitales", "Temperature Glacial", "EMF 5"],
-            "Foncton unique": ["La vitesse de chasse est presque doublée si elle est en ligne de mire jusqu'à ce qu'elle atteigne 2 m du joueur si le disjoncteur est ALLUMÉ", "Perte de santé de 25 % en utilisant une capacité si vous vous tenez à moins de 3 m du fantôme et si le disjoncteur est ALLUMÉ.", "Le disjoncteur ne peut pas être éteint"]
+            "tips": ["La vitesse de chasse est presque doublée si elle est en ligne de mire jusqu'à ce qu'elle atteigne 2 m du joueur si le disjoncteur est ALLUMÉ", "Perte de santé de 25 % en utilisant une capacité si vous vous tenez à moins de 3 m du fantôme et si le disjoncteur est ALLUMÉ.", "Le disjoncteur ne peut pas être éteint"]
         },
         "cauchemar": {
             "description": "Ce fantôme est la source de tous les cauchemars, ce qui le rend plus puissant dans le noir.",
             "faiblesse": "Allumer les lumières autour du cauchemar réduira ses chances d'attaquer",
             "force": "Un cauchemar aura plus de chances d'attaquer dans le noir.",
             "preuves": ["Spirit Box", "Obre fantômatique", "Écriture fantômatique"],
-            "Foncton unique": ["Lors de la chasse, ils sont plus susceptibles d'éteindre les lumières que toute autre forme d'interaction", "Le seuil moyen de chasse à la santé avec les lumières allumées est de 40 % et 60 % avec les lumières éteintes", "Les événements fantômes sont plus susceptibles de casser une ampoule", "Les lumières peuvent être éteintes immédiatement après les avoir allumées. Ne peut pas être spammé", "Les lumières ne peuvent pas être allumées par le fantôme", "L'itinérance à longue portée a plus de chances de se produire si les lumières sont allumées dans la pièce"]
+            "tips": ["Lors de la chasse, ils sont plus susceptibles d'éteindre les lumières que toute autre forme d'interaction", "Le seuil moyen de chasse à la santé avec les lumières allumées est de 40 % et 60 % avec les lumières éteintes", "Les événements fantômes sont plus susceptibles de casser une ampoule", "Les lumières peuvent être éteintes immédiatement après les avoir allumées. Ne peut pas être spammé", "Les lumières ne peuvent pas être allumées par le fantôme", "L'itinérance à longue portée a plus de chances de se produire si les lumières sont allumées dans la pièce"]
         },
         "revenant": {
             "description": "Un Revenant est un fantôme violent qui attaquera sans discernement. Leur vitesse peut être trompeuse, car ils sont lents pendant qu'ils dorment : cependant, dès qu'ils chassent, ils peuvent se déplacer incroyablement vite",
             "faiblesse": "Se cacher du Revenant le fera bouger très lentement",
             "force": "Un Revenant voyagera à une vitesse significativement plus rapide lors de la chasse à sa proie",
             "preuves": ["Obre fantômatique", "Écriture fantômatique", "Temperature Glacial"],
-            "Foncton unique": ["Lors de la chasse, le temps entre les pas audibles est d'un toutes les 3 secondes lorsque vous ne poursuivez pas un joueur", "La vitesse de chasse augmente de 70 % lorsqu'ils sont à la vue d'un joueur", "Vitesse de chasse, diminue de 50 % lorsqu'ils ne sont pas en ligne de vue d'un joueur"]
+            "tips": ["Lors de la chasse, le temps entre les pas audibles est d'un toutes les 3 secondes lorsque vous ne poursuivez pas un joueur", "La vitesse de chasse augmente de 70 % lorsqu'ils sont à la vue d'un joueur", "Vitesse de chasse, diminue de 50 % lorsqu'ils ne sont pas en ligne de vue d'un joueur"]
         },
         "ombre": {
             "description": "Une ombre est connue pour être très timide. Il y a des chances qu'une ombre arrêtera toute activité paranormale s'il y a plusieurs personnes à proximité",
             "faiblesse": "Le fantôme n'entrera pas dans une chasse s'il y a plusieurs personnes à proximité",
             "force": "Les nuances sont beaucoup plus difficiles à trouver",
             "preuves": ["EMF 5", "Temperature Glacial", "Écriture fantômatique"],
-            "Foncton unique": ["L'initiation à la chasse ne peut pas avoir lieu s'il y a plusieurs personnes à côté du fantôme", "La chasse moyenne à la santé passe de 50 % à 35 %", "Les événements fantômes se produisent en fonction de la santé mentale moyenne. santé mentale: chance de l'événement = 100 % : 0 % / 75 % : 50 %  / 50 % : 100 %", "Les événements fantômes sont susceptibles d'être ceux qui ont le souffle, le sifflement ou le woosh", "Les événements fantômes montrant sa forme sont susceptibles d'être une figure obscure"]
+            "tips": ["L'initiation à la chasse ne peut pas avoir lieu s'il y a plusieurs personnes à côté du fantôme", "La chasse moyenne à la santé passe de 50 % à 35 %", "Les événements fantômes se produisent en fonction de la santé mentale moyenne. santé mentale: chance de l'événement = 100 % : 0 % / 75 % : 50 %  / 50 % : 100 %", "Les événements fantômes sont susceptibles d'être ceux qui ont le souffle, le sifflement ou le woosh", "Les événements fantômes montrant sa forme sont susceptibles d'être une figure obscure"]
         },
         "demon": {
             "description": "Un démon est l'un des pires fantômes que vous puissiez rencontrer. Il a été connu pour attaquer sans raison.",
             "faiblesse": "Les démons initieront des chasses plus souvent que les autres fantômes",
             "force": "Les démons prendront moins de santé mentale lorsqu'ils répondront par le biais d'un conseil d'administration Ouija",
             "preuves": [],
-            "Foncton unique": ["L'initiation à la chasse peut avoir lieu à n'importe quelle santé mentale moyenne. Même 100 %", "Initiation à la chasse annulée avec des croix. Portée augmentée de 3 m à 5 m", "La chasse à la santé moyenne passe de 50 % à 70 %", "La prévention de la chasse au bâton de taches est réduite de 90 secondes à 60 secondes", "L'intervalle de temps de chasse est réduit de 25 secondes à 20 secondes"]
+            "tips": ["L'initiation à la chasse peut avoir lieu à n'importe quelle santé mentale moyenne. Même 100 %", "Initiation à la chasse annulée avec des croix. Portée augmentée de 3 m à 5 m", "La chasse à la santé moyenne passe de 50 % à 70 %", "La prévention de la chasse au bâton de taches est réduite de 90 secondes à 60 secondes", "L'intervalle de temps de chasse est réduit de 25 secondes à 20 secondes"]
         },
         "yurei": {
             "description": "Un Yurei est un fantôme qui est retourné dans le monde physique, généralement dans le but de se venger ou de se détester",
             "faiblesse": "La purification du lieu de mort du Yurei le piégera temporairement, réduisant à quel point il erre",
             "force": "Les Yurei ont été connus pour avoir un effet plus fort sur la santé mentale des peuples",
             "preuves": ["Obre fantômatique", "Temperature Glacial", "DOTS"],
-            "Foncton unique": ["Les événements fantômes sont susceptibles d'être \"whoosh\" ou \"hey\"", "Perte de santé de 13 % en faisant un événement fantôme de \"porte fermant\" près de chez vous.", "La prévention de la chasse au bâton de taches empêchera le fantôme de quitter la zone pendant 90 secondes"]
+            "tips": ["Les événements fantômes sont susceptibles d'être \"whoosh\" ou \"hey\"", "Perte de santé de 13 % en faisant un événement fantôme de \"porte fermant\" près de chez vous.", "La prévention de la chasse au bâton de taches empêchera le fantôme de quitter la zone pendant 90 secondes"]
         },
         "oni": {
             "description": "Oni aime effrayer ses victimes autant que possible avant d'attaquer. Ils sont souvent vus sous leur forme physique gardant leur lieu de mort",
             "faiblesse": "Les Onis sont très actifs, ce qui les rend plus faciles à trouver",
             "force": "Les Oni sont plus actifs lorsque les gens sont à proximité et ont été vus déplacer des objets à grande vitesse",
             "preuves": ["EMF 5", "Temperature Glacial", "DOTS"],
-            "Foncton unique": ["Les événements fantômes ne seront jamais transparents ou brumiques pour les événements fantômes", "Les interactions et les événements fantômes sont extrêmement fréquents"]
+            "tips": ["Les événements fantômes ne seront jamais transparents ou brumiques pour les événements fantômes", "Les interactions et les événements fantômes sont extrêmement fréquents"]
         },
         "yokai": {
             "description": "Les yokai sont des fantômes communs qui sont attirés par les voix humaines. On peut généralement les trouver envoûtantes de maisons familiales",
             "faiblesse": "Lors de la chasse, un Yokai ne peut entendre que des voix près de lui",
             "force": "Parler près d'un Yokai le mettra en colère, augmentant le risque d'une attaque",
             "preuves": ["DOTS", "Obre fantômatique", "Spirit Box"],
-            "Foncton unique": ["La chasse à la santé moyenne est augmentée de 50 % à 90 % si vous parlez continuement près du fantôme", "Les interactions augmentaient lorsque l'on parlait continuellement près du fantôme"]
+            "tips": ["La chasse à la santé moyenne est augmentée de 50 % à 90 % si vous parlez continuement près du fantôme", "Les interactions augmentaient lorsque l'on parlait continuellement près du fantôme"]
         },
         "hantu": {
             "description": "Un Hantu est un fantôme rare que l'on peut trouver dans les climats les plus froids. Le froid semble les rendre plus agressifs et plus autonomes",
             "faiblesse": "Hantus se déplace plus lentement dans les zones plus chaudes",
             "force": "Des températures plus basses peuvent amener les Hantu à se déplacer à des vitesses plus rapides",
             "preuves": ["Empreintes Digitales", "Obre fantômatique", "Temperature Glacial"],
-            "Foncton unique": ["Lors de la chasse, vous pouvez voir la respiration glaciale du fantôme dans des pièces de 3°C ou moins", "Lors de la chasse, les pas sonores augmenteront dans les zones chaudes et plus lent dans les zones froides", "La vitesse de chasse augmente de 5% à 50% à mesure que la température baisse dans les chambres", "La vitesse de chasse a diminué de 7 % dans les zones les plus chaudes", "La vitesse de chasse n'augmente pas lorsqu'il est en ligne de mire d'un joueur", "Cauchemar Les preuves seront toujours des températures glaciales", "Le disjoncteur a plus de chances d'être éteint"]
+            "tips": ["Lors de la chasse, vous pouvez voir la respiration glaciale du fantôme dans des pièces de 3°C ou moins", "Lors de la chasse, les pas sonores augmenteront dans les zones chaudes et plus lent dans les zones froides", "La vitesse de chasse augmente de 5% à 50% à mesure que la température baisse dans les chambres", "La vitesse de chasse a diminué de 7 % dans les zones les plus chaudes", "La vitesse de chasse n'augmente pas lorsqu'il est en ligne de mire d'un joueur", "Cauchemar Les preuves seront toujours des températures glaciales", "Le disjoncteur a plus de chances d'être éteint"]
         },
         "goryo": {
             "description": "Lorsqu'un Goryo passe par un projecteur DOTS, l'utilisation d'une caméra vidéo est le seul moyen de le voir",
             "faiblesse": "Ils sont rarement vus loin de leur lieu de mort",
             "force": "Un Goryo ne se montrera généralement devant la caméra que s'il n'y a personne à proximité",
             "preuves": ["EMF 5", "DOTS", "Empreintes Digitales"],
-            "Foncton unique": ["Les DOTS ne peuvent être vus qu'à travers une caméra vidéo et personne ne peut être dans la même pièce", "DOTS ne peuvent être vus à travers le projecteur de la caméra vidéo que si vous êtes juste à l'extérieur de la pièce ou depuis le moniteur de la camionnette", "L'itinérance sur de longues distances a de très faibles chances", "Les preuves cauchemardesques seront toujours DOTS"]
+            "tips": ["Les DOTS ne peuvent être vus qu'à travers une caméra vidéo et personne ne peut être dans la même pièce", "DOTS ne peuvent être vus à travers le projecteur de la caméra vidéo que si vous êtes juste à l'extérieur de la pièce ou depuis le moniteur de la camionnette", "L'itinérance sur de longues distances a de très faibles chances", "Les preuves cauchemardesques seront toujours DOTS"]
         },
         "myling": {
             "description": "Un Myling est un fantôme très vocal et actif. La rumeur veut qu'ils se taisent lorsqu'ils chassent leurs proies",
             "faiblesse": "Les mylings émettent plus fréquemment des sons paranormaux",
             "force": "Un Myling est connu pour être plus silencieux lors de la chasse",
             "preuves": ["EMF 5", "Empreintes Digitales", "Écriture fantômatique"],
-            "Foncton unique": ["Lors de la chasse, les pas ne peuvent être entendus qu'à moins de 10 m du joueur (même distance lorsque les lampes de poche pulsent)", "Le microphone parabolique a une chance d'avoir une file d'attente audio unique qui murmure des fantômes"]
+            "tips": ["Lors de la chasse, les pas ne peuvent être entendus qu'à moins de 10 m du joueur (même distance lorsque les lampes de poche pulsent)", "Le microphone parabolique a une chance d'avoir une file d'attente audio unique qui murmure des fantômes"]
         },
         "onryo": {
             "description": "L'Onryo est souvent appelé \"l'Esprit de la colère\". Il vole des âmes aux corps des victimes mourantes pour se venger. Ce fantôme a été connu pour craindre toute forme de feu, et fera tout pour être loin de lui",
             "faiblesse": "Lorsqu'il est menacé, ce fantôme sera moins susceptible de chasser.",
             "force": "Éteindre une flamme peut provoquer une attaque d'Onryo",
             "preuves": ["Spirit Box", "Obre fantômatique", "Temperature Glacial"],
-            "Foncton unique": ["L'initiation à la chasse ne peut pas avoir lieu lorsque le fantôme se trouve à moins de 4 m d'une bougie allumée/d'un feu de camp", "L'initiation à la chasse peut se produire si une bougie/un feu de camp est soufflé par le fantôme et qu'aucun autre bougie allumé/feu de camp n'est à portée de main. Les 3 premières éruptions sont gratuites, la 4e a 50 % de chance. S'il y a 2 joueurs ou plus morts, la chance est augmentée à 100%", "La chasse à la santé moyenne passe de 50 % à 60 % s'il n'y a pas de bougies allumées/feu de camp à proximité", "Les bougies/feux de camp ont plus de chances d'être soufflés", "Les bougies/feux de camp donneront la priorité à la soufflage des bougies/feu de camp plutôt qu'aux mordant une croix"]
+            "tips": ["L'initiation à la chasse ne peut pas avoir lieu lorsque le fantôme se trouve à moins de 4 m d'une bougie allumée/d'un feu de camp", "L'initiation à la chasse peut se produire si une bougie/un feu de camp est soufflé par le fantôme et qu'aucun autre bougie allumé/feu de camp n'est à portée de main. Les 3 premières éruptions sont gratuites, la 4e a 50 % de chance. S'il y a 2 joueurs ou plus morts, la chance est augmentée à 100%", "La chasse à la santé moyenne passe de 50 % à 60 % s'il n'y a pas de bougies allumées/feu de camp à proximité", "Les bougies/feux de camp ont plus de chances d'être soufflés", "Les bougies/feux de camp donneront la priorité à la soufflage des bougies/feu de camp plutôt qu'aux mordant une croix"]
         },
-        "les jumeaux": {
+        "les_jumeaux": {
             "description": "Il a été rapporté que ces fantômes imitent les actions les uns des autres. Ils alternent leurs attaques pour confondre leurs proies",
             "faiblesse": "Les jumeaux interagiront souvent avec l'environnement en même temps",
             "force": "Soit les jumeaux peuvenet être mis en colère et initier une attaque contre sa proie",
             "preuves": ["EMF 5", "Spirit Box", "Temperature Glacial"],
-            "Foncton unique": ["L'initiation à la chasse peut avoir lieu là où l'un ou l'autre des jumeaux se trouve actuellement. Cela inclut le cercle d'invocation", "L'initiation à la chasse à partir du jumeau alternatif interagira avec quelque chose de sapin puis chassera immédiatement", "La vitesse de chasse est diminuée de 10% pour le jumeau qui se trouve dans la salle fantôme", "La vitesse de chasse est augmentée de 10 % pour le bicylindre alternatif qui ne se trouve pas dans la pièce fantôme", "Les interactions se produiront dans deux zones séparées de la pièce/carte presque en même temps", "Activité Montior montrera une montée initiale puis se stabilisera suivie d'un pic immédiat indiquant une double interaction", "Les preuves ne seront pas disponibles auprès de l'alt-jumeaux à l'exception de EMF5"]
+            "tips": ["L'initiation à la chasse peut avoir lieu là où l'un ou l'autre des jumeaux se trouve actuellement. Cela inclut le cercle d'invocation", "L'initiation à la chasse à partir du jumeau alternatif interagira avec quelque chose de sapin puis chassera immédiatement", "La vitesse de chasse est diminuée de 10% pour le jumeau qui se trouve dans la salle fantôme", "La vitesse de chasse est augmentée de 10 % pour le bicylindre alternatif qui ne se trouve pas dans la pièce fantôme", "Les interactions se produiront dans deux zones séparées de la pièce/carte presque en même temps", "Activité Montior montrera une montée initiale puis se stabilisera suivie d'un pic immédiat indiquant une double interaction", "Les preuves ne seront pas disponibles auprès de l'alt-jumeaux à l'exception de EMF5"]
         },
         "raiju": {
             "description": "Un Raiju est un démon qui prospère sur le courant électrique. Bien que généralement calmes, ils peuvent devenir agités lorsqu'ils sont submergés de pouvoir",
             "faiblesse": "Raiju perturbent de manière constatante les équipements électroniques, ce qui facilite la suivi lors des attaques",
             "force": "Un Raiju peut siphonner l'alimentation à partir d'appareils électriques à proximité, ce qui le fait se déplacer plus rapidement",
             "preuves": ["EMF 5", "Obre fantômatique", "DOTS"],
-            "Foncton unique": ["Lors de la chasse, des pas plus rapides peuvent être entendus lorsqu'ils passent devant l'équipement électrique", "La vitesse de chasse augmente de 65 % lorsqu'elle est à portée de tout équipement électrique laissé allumé", "La chasse à la santé moyenne passe de 50 % à 65 % lorsque l'équipement électrique à proximité est laissé allumé"]
+            "tips": ["Lors de la chasse, des pas plus rapides peuvent être entendus lorsqu'ils passent devant l'équipement électrique", "La vitesse de chasse augmente de 65 % lorsqu'elle est à portée de tout équipement électrique laissé allumé", "La chasse à la santé moyenne passe de 50 % à 65 % lorsque l'équipement électrique à proximité est laissé allumé"]
         },
         "obake": {
             "description": "Les Obake sont de terrifiants changeurs de forme, capables de prendre de nombreuses formes. On les a vus prendre des formes humanoïdes pour attirer leurs proies",
             "faiblesse": "Parfois, ce fantôme changera de forme, laissant derrière lui des preuves uniques",
             "force": "Lorsqu'il interagit avec l'environnement, un Obake laissera rarement une trace",
             "preuves": ["EMF 5", "Empreintes Digitales", "Obre fantômatique"],
-            "Foncton unique": ["Les empreintes digitales peuvent montrer 6 doigts", "Les empreintes digitales ont 70 % de chances de montrer", "Les empreintes digitales disparaissent la minuterie peut diminuer de 2 minutes à 1 minute", "Les preuves en cauchemar seront toujours des empreintes digitales"]
+            "tips": ["Les empreintes digitales peuvent montrer 6 doigts", "Les empreintes digitales ont 70 % de chances de montrer", "Les empreintes digitales disparaissent la minuterie peut diminuer de 2 minutes à 1 minute", "Les preuves en cauchemar seront toujours des empreintes digitales"]
         },
         "mimic": {
             "description": "Le Mimic est un fantôme insaisissable, mystérieux et imitateur qui reflète les traits et les comportements des autres, y compris d'autres types de fantômes",
             "faiblesse": "Plusieurs rapports ont noté des observations d'orbes fantômes près d'imiter",
             "force": "Nous ne savons pas de quoi ce fantôme est capable. Faites attention",
             "preuves": ["Obre fantômatique", "Spirit Box", "Empreintes Digitales", "Temperature Glacial"],
-            "Foncton unique": ["Orbe fantômatique apparaîtra comme un quatrième élément de preuve", "Orbe fantômatique suivra le fantôme pendant qu'il erre", "Peut imiter les traits d'autres fantômes, y compris la chasse précoce"]
+            "tips": ["Orbe fantômatique apparaîtra comme un quatrième élément de preuve", "Orbe fantômatique suivra le fantôme pendant qu'il erre", "Peut imiter les traits d'autres fantômes, y compris la chasse précoce", "En Cauchemar est le seul avec 3 preuves"]
         }
     }
 }

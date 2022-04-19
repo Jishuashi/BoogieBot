@@ -9,7 +9,7 @@ module.exports = {
         message.channel.send("pong!");
     },
     runInteraction: (client, interaction) => {
-        interaction.reply('Pong!');
+        interaction.reply('pong!');
     },
 
 }
