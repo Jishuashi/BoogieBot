@@ -33,9 +33,10 @@ module.exports = {
 
     const embed = new MessageEmbed().setTitle("Random Map");
 
-    random = Math.random();
-    randomM = Math.floor(random * mapParsed.map.length);
-    randomD = Math.floor(random * mapParsed.dif.length);
+    randomM = Math.random();
+    randomD = Math.random();
+    randomM = Math.floor(randomM * mapParsed.map.length);
+    randomD = Math.floor(randomD * mapParsed.dif.length);
 
     embed.addField(
       "-----------------\n",
