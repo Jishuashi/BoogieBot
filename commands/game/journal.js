@@ -6,7 +6,7 @@ const separator = "\n-----------------------------------------"
 module.exports = {
     name: 'journal',
     permissions: ['MENTION_EVERYONE'],
-    category: 'journal',
+    category: 'game',
     description: 'Donne la documentation du journal phasmo',
     usage: "!journal",
     once: true,
@@ -53,8 +53,7 @@ module.exports = {
             required: true,
             choices: [{
                 name: "Fantôme",
-                value: "fantome"
-
+                value: "fantome",
             }]
         },
         {

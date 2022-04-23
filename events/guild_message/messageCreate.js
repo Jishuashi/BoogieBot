@@ -1,4 +1,5 @@
 const prefix = '!';
+const fs = require("fs");
 
 module.exports = {
     name: 'messageCreate',
@@ -18,5 +19,11 @@ module.exports = {
         if (!message.member.permissions.has([cmd.permissions])) return message.reply("Vous n'avez pas les permissions requise");
 
         if (cmd) cmd.run(client, message, args);
+
+
+        if(cmd.name == "code"){
+            codeJSON = fs.readFileSync("./code.json")
+            codeParsed = JSON.parse(codeJSON);
+        }
     },
 }
