@@ -52,14 +52,15 @@ module.exports = {
                 embed.setTitle("Willow");
                 embed.setImage("https://media.sirusgaming.com/wp-content/uploads/2022/01/Willow-Street-House-Phasmophobia-Cursed-Possessions-Spawn-Locations.png");
                 break;  
-            case "default":
-                embed.setTitle("Error");
-                embed.addField("Argument inconnu v", `${args[0]}`);    
+            default:
+                embed.setTitle("ERROR");
+                embed.setImage("https://image.shutterstock.com/image-vector/eror-404-sign-cloud-computing-260nw-2109211787.jpg");
+                break;   
         }
 
         message.channel.send({ embeds: [embed] });
     },
-    option : [{
+    options : [{
         name: "map",
         description: 'Tapez le nom de la map que vous voulez consulter',
         type: "STRING",
@@ -105,7 +106,7 @@ module.exports = {
             value: "t#anglewood",
         }
     ]
-    },],
+    }],
     runInteraction: (client, interaction) => {
         const embed = new MessageEmbed();
 
@@ -133,7 +134,7 @@ module.exports = {
                 embed.setTitle("Ridgeview");
                 embed.setImage("https://sirjimmothy.github.io/phasmo/img/map_ridgeview.png");
                 break;
-            case "edgeflied":
+            case "edgefield":
                 embed.setTitle("Edgeflied");
                 embed.setImage("https://blocs.news/wp-content/uploads/2021/12/Edgefield-Street-House-Cursed-items-location-zWCzq262-5.jpg");
                 break;
@@ -153,12 +154,13 @@ module.exports = {
                 embed.setTitle("Willow");
                 embed.setImage("https://media.sirusgaming.com/wp-content/uploads/2022/01/Willow-Street-House-Phasmophobia-Cursed-Possessions-Spawn-Locations.png");
                 break;  
-            case "default":
-                embed.setTitle("Error");
-                embed.addField("Argument inconnu v", `${map}`);    
+            default:
+                embed.setTitle("ERROR");
+                embed.setImage("https://image.shutterstock.com/image-vector/eror-404-sign-cloud-computing-260nw-2109211787.jpg");
+                break;  
         }
 
-        message.channel.send({ embeds: [embed] });
+        interaction.reply({ embeds: [embed] });
     },
 
 }
