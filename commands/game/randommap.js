@@ -18,35 +18,57 @@ module.exports = {
     randomD = Math.floor(random * mapParsed.dif.length);
 
     embed.addField(
-      "-----------------\n",
-      `La map -->   ${mapParsed.map[randomM]}`
+        "-----------------\n",
+        `La map -->   ${mapParsed.map[randomM]}`
     );
     embed.addField(
-      "-----------------\n",
-      `La Difficulté  -->   ${mapParsed.dif[randomD]}`
+        "-----------------\n",
+        `La Difficulté  -->   ${mapParsed.dif[randomD]}`
     );
 
-    message.channel.send({ embeds: [embed] });
+    message.channel.send({embeds: [embed]});
   },
   runInteraction: (client, interaction) => {
     mapParsed = JSON.parse(fs.readFileSync("./map.json"));
-
+    permParsed = JSON.parse(fs.readFileSync("./perm.json"));
     const embed = new MessageEmbed().setTitle("Random Map");
 
-    randomM = Math.random();
-    randomD = Math.random();
-    randomM = Math.floor(randomM * mapParsed.map.length);
-    randomD = Math.floor(randomD * mapParsed.dif.length);
 
-    embed.addField(
-      "-----------------\n",
-      `La map -->   ${mapParsed.map[randomM]}`
-    );
-    embed.addField(
-      "-----------------\n",
-      `La Difficulté  -->   ${mapParsed.dif[randomD]}`
-    );
+    perm = true
 
-    interaction.reply({ embeds: [embed] });
-  },
+    lMemberList =  permParsed["member"];
+
+    for (let i = 0; i <  permParsed["member"].length; i++) {
+      if(interaction.member.id == permParsed["member"][i]["id"]){
+        perm = false;
+        StringTime = permParsed["member"][i]["timeString"];
+      }
+      else {
+        perm = true;
+      }
+    }
+
+    if(perm){
+        randomM = Math.random();
+        randomD = Math.random();
+        randomM = Math.floor(randomM * mapParsed.map.length);
+        randomD = Math.floor(randomD * mapParsed.dif.length);
+
+        embed.addField(
+            "-----------------\n",
+            `La map -->   ${mapParsed.map[randomM]}`
+        );
+        embed.addField(
+            "-----------------\n",
+            `La Difficulté  -->   ${mapParsed.dif[randomD]}`
+        );
+
+        interaction.reply({embeds: [embed]});
+    }else
+    {
+      embed.addField("Error", "Vous n'êtes pas autorisé à utilisé cette commande pendant " + StringTime);
+
+      interaction.reply({embeds: [embed]});
+    }
+  }
 };
