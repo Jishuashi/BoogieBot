@@ -31,7 +31,7 @@ module.exports = {
     {
       name: "code",
       description: "Tapez le code de la game",
-      type: 4,
+      type: 3,
       required: false,
     },
   ],
