@@ -51,9 +51,8 @@ module.exports = {
 
       const embed = new EmbedBuilder()
           .setTitle(`Game Phasmo ${objectGame.id}`)
-          .addField(
-              "Info de la game \n" + separator,
-              `Code de la Game --> ${objectGame.code}`
+          .addFields (
+              { name: "Info de la game \n" + separator, value :  `Code de la Game --> ${objectGame.code}`}
           );
     }
   }
