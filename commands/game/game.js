@@ -54,6 +54,8 @@ module.exports = {
           .addFields (
               { name: "Info de la game \n" + separator, value :  `Code de la Game --> ${objectGame.code}`}
           );
+
+      interaction.reply( { embeds : [embed]});
     }
   }
 };
