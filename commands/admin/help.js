@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 const { readdirSync } = require("fs");
 const commandFolder = readdirSync('./commands');
 const prefix = '!';
@@ -12,7 +12,7 @@ module.exports = {
     once: true,
     run: (client, message, args) => {
         if (!args.length) {
-            const noArgsEmbed = new MessageEmbed()
+            const noArgsEmbed = new EmbedBuilder()
                 .setColor("#230DA9")
                 .addField('Listes des commandes', `Une liste de toute les catégorie disponnible et leurs commande.\npour plus d'information tapez \n \`${prefix}help <command>\``)
 
@@ -28,7 +28,7 @@ module.exports = {
         cmd = client.commands.get(args[0]);
         if (!cmd) return message.channel.send("Cette commande n'existe pas");
 
-        const argsEmbed = new MessageEmbed()
+        const argsEmbed = new EmbedBuilder()
             .setColor("#230DA9")
             .setTitle(`\`${cmd.name}\``)
             .setDescription(`${cmd.description}`)
@@ -42,14 +42,14 @@ module.exports = {
     options: [{
         name: "command",
         description: 'Tapez le nom de votre commande',
-        type: "STRING",
+        type:3,
         required: false
     }],
     runInteraction: (client, interaction) => {
         const cmdName = interaction.options.getString('command');
 
         if (!cmdName) {
-            const noArgsEmbed = new MessageEmbed()
+            const noArgsEmbed = new EmbedBuilder()
                 .setColor("#230DA9")
                 .addField('Listes des commandes', `Une liste de toute les catégorie disponnible et leurs commande.\npour plus d'information tapez \n \`${prefix}help <command>\``)
 
@@ -65,7 +65,7 @@ module.exports = {
         cmd = client.commands.get(cmdName);
         if (!cmd) return interaction.reply({ content: "Cette commande n'existe pas", ephemeral: true });
 
-        const argsEmbed = new MessageEmbed()
+        const argsEmbed = new EmbedBuilder()
             .setColor("#230DA9")
             .setTitle(`\`${cmd.name}\``)
             .setDescription(`${cmd.description}`)

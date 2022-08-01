@@ -49,7 +49,7 @@ module.exports = {
     options: [{
             name: "index",
             description: 'Tapez l\'index du journal que vous voulez consulter',
-            type: "STRING",
+            type: 3,
             required: true,
             choices: [{
                 name: "Fantôme",
@@ -59,7 +59,7 @@ module.exports = {
         {
             name: "fantome",
             description: 'Tapez le nom du fantome que vous voulez consulter',
-            type: "STRING",
+            type: 3,
             required: true,
             choices: [
                 { name: "Myling", value: "myling" },
