@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { EmbedBuilder, AttachmentBuilder } = require("discord.js");
 const fs = require("fs");
 const separator = "\n-----------------------------------------"
 
@@ -46,17 +46,8 @@ module.exports = {
             message.channel.send({ embeds: [embed] })
         }
     },
-    options: [{
-            name: "index",
-            description: 'Tapez l\'index du journal que vous voulez consulter',
-            type: 3,
-            required: true,
-            choices: [{
-                name: "Fantôme",
-                value: "fantome",
-            }]
-        },
-        {
+    options:
+        [{
             name: "fantome",
             description: 'Tapez le nom du fantome que vous voulez consulter',
             type: 3,
@@ -72,7 +63,7 @@ module.exports = {
                 { name: "Djinn", value: "djinn" },
                 { name: "Revenant", value: "revenant" },
                 { name: "Les Jumeaux", value: "les_jumeaux" },
-                { name: "Demon", value: "demon" },
+                { name: "Démon", value: "démon" },
                 { name: "Le Mimic", value: "mimic" },
                 { name: "Obake", value: "obake" },
                 { name: "Raiju", value: "raiju" },
@@ -83,45 +74,58 @@ module.exports = {
                 { name: "Poltergeist", value: "poltergeist" },
                 { name: "Fantôme", value: "fantom" },
                 { name: "Ombre", value: "ombre" },
+                { name: "Deogen", value: "deogen" },
+                { name: "Moroï", value: "moroï" },
+                { name: "Thayé", value: "thayé" },
             ]
         }
-    ],
+        ],
     runInteraction: (client, interaction) => {
-        const index = interaction.options.getString("index");
         const fantome = interaction.options.getString("fantome");
 
         let journalJSON = fs.readFileSync("./journal.json");
         let journalParsed = JSON.parse(journalJSON);
 
+        let strPreuves = "";
+        let strTips = "";
 
-        if (index == "fantome") {
 
-            let strPreuves = "";
-            let strTips = "";
+        const embed = new EmbedBuilder()
+            .setTitle(`${fantome.replace(/(^\w|\s\w)/g, firstLetter => firstLetter.toUpperCase())} :`);
 
-            const embed = new MessageEmbed()
-                .setTitle(`${fantome.replace(/(^\w|\s\w)/g, firstLetter => firstLetter.toUpperCase())}`);
+        let fantomPage = journalParsed[`fantome`][`${fantome}`];
 
-            let fantomPage = journalParsed[`${index}`][`${fantome}`];
+        embed.addFields({ name: `Description :${separator} `, value: fantomPage["description"] } );
+        embed.addFields({ name: `Force :${separator} : `, value: fantomPage["force"] });
+        embed.addFields({ name: `Faiblesse :${separator}  `, value: fantomPage["faiblesse"] });
 
-            embed.addField(`Description ${separator}`, fantomPage["description"]);
-            embed.addField(`Force ${separator}`, fantomPage["force"]);
-            embed.addField(`Faiblesse ${separator}`, fantomPage["faiblesse"]);
+        for (let i = 0; i < fantomPage["preuves"].length; i++) {
+            strPreuves += "- " + fantomPage["preuves"][i] + "\n";
+        }
 
-            for (let i = 0; i < fantomPage["preuves"].length; i++) {
-                strPreuves += "- " + fantomPage["preuves"][i] + "\n";
+        embed.addFields({ name: `Preuves :${separator}`, value: strPreuves });
+
+       if (fantomPage["tips"].length != 0) {
+            strTips = "- " + fantomPage["tips"][0] + "\n";
+
+                embed.addFields({ name: `Tips : ${separator}`, value: strTips})
+
+            for (let j = 1; j < fantomPage["tips"].length; j++) {
+                strTips = "- " + fantomPage["tips"][j] + "\n";
+
+                embed.addFields({ name: `‎`, value: strTips })
             }
+        }
 
-            embed.addField(`Preuves ${separator}`, strPreuves);
 
-            if (fantomPage["tips"].length != 0) {
-                for (let j = 0; j < fantomPage["tips"].length; j++) {
-                    strTips += "- " + fantomPage["tips"][j] + "\n";
-                }
+        if(fantomPage["file"]){
+            const fileAudio = new AttachmentBuilder(`./audio/${fantome}.mp3`)
+
+                embed.addFields({name : `Audio ${separator}`, value:`Au dessus du Message`});
+                interaction.reply({files: [fileAudio], embeds: [embed]});
+        
             }
-
-            embed.addField(`Tips ${separator}`, strTips)
-
+        else{
             interaction.reply({ embeds: [embed] })
         }
     },
