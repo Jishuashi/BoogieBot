@@ -1,6 +1,6 @@
 module.exports = {
     name: 'ping',
-    permissions: ['MENTION_EVERYONE'],
+    permissions: ['ViewChannel'],
     category: 'utils',
     description: 'renvoie pong!',
     usage: "!ping",

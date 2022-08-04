@@ -5,7 +5,7 @@ const prefix = '!';
 
 module.exports = {
     name: 'help',
-    permissions: ['MENTION_EVERYONE'],
+    permissions: ['ViewChannel'],
     description: 'renvoie l\'aide ',
     category: 'admin',
     usage: "!help <command>",
