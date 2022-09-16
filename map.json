@@ -1,4 +1,5 @@
 {
-    "map":["Grafton Farmhouse", "Asile", "Prison", "Bleadsdale farmhouse", "École", "Edgefield House", "Ridgeview Road House", "Willow House", "Camping", "Tanglewood Street House"],
-    "dif" : ["Cauchemar", "Professionnel", "Intermediaire", "Amateur"]
+    "maps":["Grafton Farmhouse", "Asile", "Prison", "Bleadsdale farmhouse", "École", "Edgefield House", "Ridgeview Road House", "Willow House", "Camping", "Tanglewood Street House"],
+    "dif" : ["Cauchemar", "Professionnel", "Intermediaire", "Amateur"],
+    "mapsI":["grafton", "asile", "prison", "bleadsdale", "école", "edgefield", "ridgeview", "willow", "camping", "tanglewood"]
 }

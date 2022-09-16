@@ -1,0 +1,4 @@
+{
+    "map":["Police Station", "Training Base", "City School", "Abandoned House"],
+    "dif" : ["Normal", "Hard", "Insane"]
+}

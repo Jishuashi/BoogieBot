@@ -1,5 +1,5 @@
 const { time, log } = require("console");
-const { EmbedBuilder, MessageButton, MessageActionRow, AttachmentBuilder } = require("discord.js");
+const { EmbedBuilder, MessageButton, MessageActionRow, AttachmentBuilder, flatten } = require("discord.js");
 const fs = require("fs");
 const separator = "------------------------------\n";
 
@@ -58,6 +58,11 @@ module.exports = {
     },
     {
         name: "random-map",
+        description: "Donne une map et une difficulté aléatoire",
+        type: "1",
+    },
+    {
+        name: "random-map-custom",
         description: "Donne une map et une difficulté aléatoire",
         type: "1",
     }
@@ -141,117 +146,146 @@ module.exports = {
         else if (subCommand == "map") {
             const embed = new EmbedBuilder();
 
-            const map = interaction.options.getString("map");
+            let map = interaction.options.getString("map");
+            let exist = false;
 
 
-            switch (map.toLowerCase()) {
+            mapParsed = JSON.parse(fs.readFileSync("./map.json"));
+            map = map.toLowerCase();
 
-                case "asile":
-                    const fileAsile = new AttachmentBuilder('./images/asile.png')
+            const fileMap = new AttachmentBuilder(`./images/${map}.png`)
 
-                    embed.setTitle("Asile");
-                    embed.setImage("attachment://asile.png");
+            embed.setTitle(`${map.replace(/(^\w|\s\w)/g, firstLetter => firstLetter.toUpperCase())}`);
+            embed.setImage(`attachment://${map}.png`);
 
-                    interaction.reply({ embeds: [embed], files: [fileAsile] });
-                    break;
-                case "bleasdale":
-                    const fileBleas = new AttachmentBuilder('./images/bleasdale.png')
-
-                    embed.setTitle("Bleasdale");
-                    embed.setImage("attachment://bleasdale.png");
-
-                    interaction.reply({ embeds: [embed], files: [fileBleas] });
-                    break;
-                case "grafton":
-                    const fileGraft = new AttachmentBuilder('./images/grafton.png')
-
-                    embed.setTitle("Grafton");
-                    embed.setImage("attachment://grafton.png");
-
-                    interaction.reply({ embeds: [embed], files: [fileGraft] });
-                    break;
-                case "prison":
-                    const filePrison = new AttachmentBuilder('./images/prison.png')
-
-                    embed.setTitle("Prison");
-                    embed.setImage("attachment://prison.png");
-
-
-                    interaction.reply({ embeds: [embed], files: [filePrison] });
-                    break;
-                case "ridgeview":
-                    const fileRidge = new AttachmentBuilder('./images/ridgeview.png')
-
-                    embed.setTitle("Ridgeview");
-                    embed.setImage("attachment://ridgeview.png");
-
-                    interaction.reply({ embeds: [embed], files: [fileRidge] });
-                    break;
-                case "edgefield":
-                    const fileEdge = new AttachmentBuilder('./images/edgefield.png')
-
-                    embed.setTitle("Edgefield");
-                    embed.setImage("attachment://edgefield.png");
-
-                    interaction.reply({ embeds: [embed], files: [fileEdge] });
-                    break;
-                case "tanglewood":
-                    const fileTangle = new AttachmentBuilder('./images/tanglewood.png')
-
-                    embed.setTitle("Tanglewood");
-                    embed.setImage("attachment://tanglewood.png");
-
-                    interaction.reply({ embeds: [embed], files: [fileTangle] });
-                    break;
-                case "camping":
-                    const fileCamp = new AttachmentBuilder('./images/camping.png')
-
-                    embed.setTitle("Camping");
-                    embed.setImage("attachment://camping.png");
-
-                    interaction.reply({ embeds: [embed], files: [fileCamp] });
-                    break;
-
-                case "ecole":
-                    const fileEcole = new AttachmentBuilder('./images/ecole.png');
-
-                    embed.setTitle("École");
-                    embed.setImage("attachment://ecole.png");
-
-                    interaction.reply({ embeds: [embed], files: [fileEcole] });
-
-                    break;
-                case "willow":
-                    const fileWill = new AttachmentBuilder('./images/willow.png')
-
-                    embed.setTitle("Willow");
-                    embed.setImage("attachment://willow.png");
-
-                    interaction.reply({ embeds: [embed], files: [fileWill] });
-                    break;
-                default:
-                    embed.setTitle("ERROR");
-                    embed.setImage("https://image.shutterstock.com/image-vector/eror-404-sign-cloud-computing-260nw-2109211787.jpg");
-
-                    interaction.reply({ embeds: [embed] });
-                    break;
-            }
+            interaction.reply({ embeds: [embed], files: [fileMap] });
         }
         else if (subCommand == "random-map") {
             mapParsed = JSON.parse(fs.readFileSync("./map.json"));
 
             randomM = Math.random();
             randomD = Math.random();
-            randomM = Math.floor(randomM * mapParsed.map.length);
+            randomM = Math.floor(randomM * mapParsed.maps.length);
             randomD = Math.floor(randomD * mapParsed.dif.length);
 
             const embed = new EmbedBuilder().setTitle("Random Map")
                 .addFields(
-                    { name: "-----------------\n", value: `La map -->   ${mapParsed.map[randomM]}` },
+                    { name: "-----------------\n", value: `La map -->   ${mapParsed.maps[randomM]}` },
                     { name: "-----------------\n", value: `La Difficulté  -->   ${mapParsed.dif[randomD]}` }
                 );
 
             interaction.reply({ embeds: [embed] });
+        }
+        else if (subCommand == "random-map-custom") {
+            mapParsed = JSON.parse(fs.readFileSync("./mapCustom.json"));
+            str = "",
+            strG = "",
+            strC = "",
+
+            randomM = Math.random();
+            randomM = Math.floor(randomM * mapParsed.maps.length);
+            
+            const embed = new EmbedBuilder().setTitle("Random Map")
+                .addFields(
+                    { name: "-----------------\n", value: `La map -->   ${mapParsed.maps[randomM]}` },
+                    { name: "-----------------\n", value: `La Difficulté  -->   Custom` },
+                );
+
+                for(let i = 0; i < mapParsed["customP"].length; i++){
+                    random = 0
+
+                    if(mapParsed["customP"][i]["value"] == "num"){
+                        maxVal = mapParsed["customP"][i]["max_val"],
+                        random = Math.floor(Math.random() * maxVal)
+                    }else if(mapParsed["customP"][i]["value"] == "float"){
+                        listFloat = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0]
+
+                        maxVal = mapParsed["customP"][i]["max_val"];
+                        random = listFloat[Math.floor(Math.random() * maxVal)];
+                    }else{
+                        random = Math.floor(Math.random() * 3)
+                        boolTest = true
+
+                        if(random >= 2){
+                            boolTest = false
+                        }
+
+                        random = boolTest
+                    }
+                    
+                    str += `${mapParsed["customP"][i]["name"]} : ${random}\n`;
+
+                }
+                if(mapParsed["customP"].length != 0){
+                    embed.addFields({name:`Custom Player Settings \n${separator}`, value: str})
+                }
+
+
+                for(let j = 0; j < mapParsed["customGhost"].length; j++){
+                    random = 0
+
+                    if(mapParsed["customGhost"][j]["value"] == "num"){
+                        maxVal = mapParsed["customP"][j]["max_val"],
+                        random = Math.floor(Math.random() * maxVal)
+                    }else if(mapParsed["customGhost"][j]["value"] == "float"){
+                        listFloat = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0]
+
+                        maxVal = mapParsed["customGhost"][j]["max_val"];
+                        random = listFloat[Math.floor(Math.random() * maxVal)];
+                    }else{
+                        random = Math.floor(Math.random() * 3)
+                        boolTest = true
+
+                        if(random >= 2){
+                            boolTest = false
+                        }
+
+                        random = boolTest
+                    }
+                    
+                    strG += `${mapParsed["customGhost"][j]["name"]} : ${random}\n`;
+
+                }
+                if(mapParsed["customGhost"].length != 0){
+                    embed.addFields({name:`Custom Ghost Settings \n${separator}`, value: strG})
+                }
+
+                
+
+                for(let m = 0; m < mapParsed["customContract"].length; m++){
+                    random = 0
+
+                    if(mapParsed["customContract"][m]["value"] == "num"){
+                        maxVal = mapParsed["customContract"][m]["max_val"],
+                        random = Math.floor(Math.random() * maxVal)
+                    }else if(mapParsed["customContract"][m]["value"] == "float"){
+                        listFloat = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0]
+
+                        maxVal = mapParsed["customContract"][m]["max_val"];
+                        random = listFloat[Math.floor(Math.random() * maxVal)];
+                    }else{
+                        random = Math.floor(Math.random() * 3)
+                        boolTest = true
+
+                        if(random >= 2){
+                            boolTest = false
+                        }
+
+                        random = boolTest
+                    }
+                    
+                    strC += `${mapParsed["customContract"][m]["name"]} : ${random}\n`;
+
+                }
+                if(mapParsed["customContract"].length != 0){
+                    embed.addFields({name:`Custom Contract Settings \n${separator}`, value: strC})
+                }
+
+
+            interaction.reply({ embeds: [embed] });
+        }
+        else {
+            interaction.reply("Ceci n'est pas une Subcommand")
         }
 
     },

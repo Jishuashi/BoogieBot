@@ -8,41 +8,12 @@ module.exports = {
     permissions: ['ViewChannel'],
     description: 'renvoie l\'aide ',
     category: 'admin',
-    usage: "!help <command>",
+    usage: "/help <command>",
     once: true,
-    run: (client, message, args) => {
-        if (!args.length) {
-            const noArgsEmbed = new EmbedBuilder()
-                .setColor("#230DA9")
-                .addField('Listes des commandes', `Une liste de toute les catégorie disponnible et leurs commande.\npour plus d'information tapez \n \`${prefix}help <command>\``)
-
-
-            for (const category of commandFolder) {
-                noArgsEmbed.addField(`${category.replace(/(^\w|\s\w)/g, firstLetter => firstLetter.toUpperCase())}`,
-                    `\`${client.commands.filter(cmd => cmd.category.toLowerCase() == category.toLowerCase()).map(cmd => cmd.name).join(', ')}\``)
-            }
-
-            return message.channel.send({ embeds: [noArgsEmbed] });
-        }
-
-        cmd = client.commands.get(args[0]);
-        if (!cmd) return message.channel.send("Cette commande n'existe pas");
-
-        const argsEmbed = new EmbedBuilder()
-            .setColor("#230DA9")
-            .setTitle(`\`${cmd.name}\``)
-            .setDescription(`${cmd.description}`)
-            .setFooter(`Usage --> ${cmd.usage}`);
-
-
-
-        return message.channel.send({ embeds: [argsEmbed] });
-
-    },
     options: [{
         name: "command",
         description: 'Tapez le nom de votre commande',
-        type:3,
+        type: 3,
         required: false
     }],
     runInteraction: (client, interaction) => {
@@ -51,12 +22,11 @@ module.exports = {
         if (!cmdName) {
             const noArgsEmbed = new EmbedBuilder()
                 .setColor("#230DA9")
-                .addField('Listes des commandes', `Une liste de toute les catégorie disponnible et leurs commande.\npour plus d'information tapez \n \`${prefix}help <command>\``)
+                .addFields({ name: 'Listes des commandes', value: `Une liste de toute les catégorie disponnible et leurs commande.\npour plus d'information tapez \n \`${prefix}help <command>\`` })
 
 
             for (const category of commandFolder) {
-                noArgsEmbed.addField(`${category.replace(/(^\w|\s\w)/g, firstLetter => firstLetter.toUpperCase())}`,
-                    `\`${client.commands.filter(cmd => cmd.category.toLowerCase() == category.toLowerCase()).map(cmd => cmd.name).join(', ')}\``)
+                noArgsEmbed.addFields({ name: `${category.replace(/(^\w|\s\w)/g, firstLetter => firstLetter.toUpperCase())}`, value: `\`${client.commands.filter(cmd => cmd.category.toLowerCase() == category.toLowerCase()).map(cmd => cmd.name).join(', ')}\`` })
             }
 
             return interaction.reply({ embeds: [noArgsEmbed], ephemeral: true });

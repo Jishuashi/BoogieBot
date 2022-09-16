@@ -1,0 +1,8 @@
+{
+    "maps":["Grafton Farmhouse", "Asile", "Prison", "Bleadsdale farmhouse", "École", "Edgefield House", "Ridgeview Road House", "Willow House", "Camping", "Tanglewood Street House"],
+    "dif" : ["Costom"],
+    "customP":[{"name":"Santé de départ", "min_val":0, "max_val":100, "value":"num"},{"name":"Santé réstoré par pillule(%)", "min_val":0, "max_val":100, "value":"num"},{"name":"Santé drainer", "min_val":0, "max_val":10, "value":"num"}, {"name":"Sprint", "value":"bool"}, {"name":"Durée de sprint", "min_val":0, "max_val":5, "value":"num"}, {"name":"Rechargement de sprint", "min_val":0, "max_val":5, "value":"num"}, {"name":"Player speed", "min_val":0, "max_val":4, "value":"float"}, {"name":"Lampe torche", "value":"bool"}, {"name":"Perte des Item", "value":"bool"}],
+    "customContract":[{"name":"Objet maudit", "min_val":0, "max_val": 5, "value":"num"}],
+    "customGhost":[],
+    "mapsI":["grafton", "asile", "prison", "bleadsdale", "école", "edgefield", "ridgeview", "willow", "camping", "tanglewood"]
+}
