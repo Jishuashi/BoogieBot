@@ -8,7 +8,7 @@ module.exports = {
     options:[{
         name: "add",
         description: "Ajoute une custom difficulty",
-        type: "1",
+        type: 1,
         options: [{
             name: "action",
             description: "Tapez l'index du journal que vous voulez consulter",

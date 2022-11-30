@@ -13,7 +13,7 @@ module.exports = {
     options: [{
         name: "game",
         description: "Crée une game phasmo",
-        type: "1",
+        type: 1,
         options: [{
             name: "action",
             description: "Tapez l'index du journal que vous voulez consulter",
@@ -31,7 +31,7 @@ module.exports = {
     {
         name: "journal",
         description: "Donne la documentation du journal phasmo",
-        type: "1",
+        type: 1,
         options:
             [{
                 name: "fantome",
@@ -46,7 +46,7 @@ module.exports = {
     {
         name: "map",
         description: "Donne la map selectionner",
-        type: "1",
+        type: 1,
         options: [{
             name: "map",
             description: 'Tapez le nom de la map que vous voulez consulter',
@@ -59,12 +59,12 @@ module.exports = {
     {
         name: "random-map",
         description: "Donne une map et une difficulté aléatoire",
-        type: "1",
+        type: 1,
     },
     {
         name: "random-map-custom",
         description: "Donne une map et une difficulté aléatoire",
-        type: "1",
+        type: 1,
     }
 
 

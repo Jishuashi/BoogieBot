@@ -13,7 +13,7 @@ module.exports = {
     options : [{
         name: "game",
         description: "Crée une game Ghost Watcher",
-        type: "1",
+        type: 1,
         options: [{
             name: "action",
             description: "Tapez l'index du journal que vous voulez consulter",
@@ -31,7 +31,7 @@ module.exports = {
     {
         name: "random-map",
         description: "Donne une map et une difficulté aléatoire",
-        type: "1",
+        type: 1,
     }],
     runInteraction: (client, interaction) => {
         const subCommand = interaction.options.getSubcommand();

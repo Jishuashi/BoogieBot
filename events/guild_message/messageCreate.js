@@ -1,4 +1,4 @@
-const prefix = '!';
+const prefix = '&';
 const fs = require("fs");
 
 module.exports = {
@@ -15,6 +15,8 @@ module.exports = {
         if (cmdName.length == 0) return;
 
         let cmd = client.commands.get(cmdName);
+
+        console.log(cmd);
 
         if (!message.member.permissions.has([cmd.permissions])) return message.reply("Vous n'avez pas les permissions requise");
 
